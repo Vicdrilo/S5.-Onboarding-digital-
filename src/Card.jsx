@@ -1,3 +1,4 @@
+import { Indicator } from "./Indicator";
 import arrowLeft from "./assets/arrow-83-24.png";
 import arrowRight from "./assets/arrow-58-24.png";
 import "./Card.css";
@@ -7,6 +8,7 @@ export function Card({
   changeNextStep,
   changePrevStep,
   checkStep,
+  lengthTutorialData,
 }) {
   const backgroundColor = { backgroundColor: currentData.bgColor };
 
@@ -25,6 +27,7 @@ export function Card({
         <h2>{currentData.title}</h2>
         <p>{currentData.description}</p>
         <div className="card-button">
+          <Indicator lengthTutorial={lengthTutorialData} step={checkStep} />
           <button onClick={changePrevStep} className={disappearPrev}>
             <img
               src={arrowLeft}

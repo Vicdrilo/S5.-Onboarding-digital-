@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import { Card } from "./Card";
 import "./App.css";
 import time_managment from "./assets/time_managment.svg";
@@ -57,6 +56,7 @@ function App() {
         changeNextStep={nextStep}
         changePrevStep={prevStep}
         checkStep={step}
+        lengthTutorialData={tutorialData.length}
       />
     </>
   );
