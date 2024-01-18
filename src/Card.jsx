@@ -8,6 +8,7 @@ export function Card({
   changeNextStep,
   changePrevStep,
   checkStep,
+  setStep,
   lengthTutorialData,
 }) {
   const backgroundColor = { backgroundColor: currentData.bgColor };
@@ -27,7 +28,11 @@ export function Card({
         <h2>{currentData.title}</h2>
         <p>{currentData.description}</p>
         <div className="card-button">
-          <Indicator lengthTutorial={lengthTutorialData} step={checkStep} />
+          <Indicator
+            lengthTutorial={lengthTutorialData}
+            stepTutorial={checkStep}
+            setStep={setStep}
+          />
           <button onClick={changePrevStep} className={disappearPrev}>
             <img
               src={arrowLeft}

@@ -11,11 +11,11 @@ function App() {
 
   //cambio estado. Botón: siguiente
   const nextStep = function () {
-    setStep(() => step + 1);
+    setStep(step + 1);
   };
   //cambio estado. Botón: anterior
   const prevStep = function () {
-    setStep(() => step - 1);
+    setStep(step - 1);
   };
 
   //Contenido de las distintas cartas del tutorial
@@ -56,6 +56,7 @@ function App() {
         changeNextStep={nextStep}
         changePrevStep={prevStep}
         checkStep={step}
+        setStep={setStep}
         lengthTutorialData={tutorialData.length}
       />
     </>
