@@ -1,6 +1,5 @@
 import styled from "styled-components";
-const transitions = ` 
-`;
+
 const ActiveDot = styled.div`
   width: 1rem;
   height: 0.5rem;
